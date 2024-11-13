@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ricky Samore's Homepage</title>
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          typography: {
+            DEFAULT: {
+              css: {
+                maxWidth: "150ch", // add required value here
+              },
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<style>
+  body {
+    background-image: linear-gradient(45deg,
+        rgba(0, 0, 0, 0.05) 25%,
+        rgba(0, 0, 0, 0) 25% 50%,
+        rgba(0, 0, 0, 0.05) 50% 75%,
+        rgba(0, 0, 0, 0) 75%),
+      linear-gradient(-45deg,
+        rgba(0, 0, 0, 0.05) 25%,
+        rgba(0, 0, 0, 0) 25% 50%,
+        rgba(0, 0, 0, 0.05) 50% 75%,
+        rgba(0, 0, 0, 0) 75%),
+      linear-gradient(45deg,
+        rgba(0, 0, 0, 0.05) 25%,
+        rgba(0, 0, 0, 0) 25% 50%,
+        rgba(0, 0, 0, 0.05) 50% 75%,
+        rgba(0, 0, 0, 0) 75%),
+      linear-gradient(-45deg,
+        rgba(0, 0, 0, 0.05) 25%,
+        rgba(0, 0, 0, 0) 25% 50%,
+        rgba(0, 0, 0, 0.05) 50% 75%,
+        rgba(0, 0, 0, 0) 75%),
+      linear-gradient(90deg, #7673f9, #ffffff);
+    background-position: 0 0, 0 0, 80px 50px, 80px 50px, 0 0;
+    background-size: 160px 50px, 160px 50px, 160px 50px, 160px 50px, 100%;
+    min-height: 100vh;
+  }
+
+  .project-title:hover+div {
+    mask:
+      linear-gradient(to right, rgba(0, 0, 0, 1)49%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, 1) 90%) 100% / 10%;
+    background: repeating-linear-gradient(45deg, transparent, transparent 3px, black 4px, transparent 5px),
+      repeating-linear-gradient(-45deg, transparent, transparent 3px, black 4px, transparent 5px),
+      linear-gradient(to right, yellow, red, blue);
+  }
+
+  .framed {
+    --s: 4px;
+    /* control the size */
+    padding: var(--s);
+    border: calc(2*var(--s)) solid #0000;
+    outline: 1px solid #000;
+    outline-offset: calc(-1*var(--s));
+    background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
+  }
+
+  .frosty {
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+</style>
+
+<body>
+  <main class="container m-auto flex justify-center">
+    <div class="bg-white/70 p-2 sm:p-8 m-4 sm:m-10 rounded-xl frosty prose">
+      <img class="m-auto mb-4 sm:m-0 sm:ml-4 framed rounded sm:float-right" src="pic_1.jpeg" alt=""
+        style="max-width: 160px;">
+      <h1 class="text-center sm:text-left">Ricky Samore</h1>
+      <div class="lg:w-[600px]">
+        <p>
+          I'm Ricky, a software engineer working at <a href="https://synthflow.ai" target="_blank"
+            rel="noopener noreferrer">Synthflow.ai</a>.
+        </p>
+        <p>If you'd like to get in touch, you can reach me via <a href="mailto:rickycontact9@gmail.com">email</a> or <a
+            href="https://linkedin.com/in/eric-samore" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+        <p>
+          You may be interested in my projects:
+        <ul class="not-prose">
+          <li class="sm:ml-4 mb-4">
+            <div class="flex items-center">
+              <a class="project-title" href="http://github.com/ricky0123/vad" target="_blank" rel="noopener noreferrer">
+                <h1 class="text-md font-bold underline">
+                  @ricky0123/vad
+                </h1>
+              </a>
+              <div class="grow h-4 ml-2">
+              </div>
+            </div>
+            <p>-- a JavaScript package that allows you to prompt users for microphone permissions and run callbacks on
+              segments of audio with user speech in a few lines of code.</p>
+          </li>
+          <li class="sm:ml-4 mb-4">
+            <div class="flex items-center">
+              <a class="project-title" href="http://github.com/ricky0123/vocoder" target="_blank"
+                rel="noopener noreferrer">
+                <h1 class="text-md font-bold underline">
+                  Vocoder
+                </h1>
+              </a>
+              <div class="grow h-4 ml-2">
+              </div>
+            </div>
+            <p>-- a Python package for dictation and speech-based input. The user writes a Python script that defines
+              how
+              patterns of speech map to Python functions to run, and these functions can leverage the Python ecosystem
+              to simulate keystrokes or issue commands to applications.</p>
+          </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
